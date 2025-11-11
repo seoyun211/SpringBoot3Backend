@@ -11,6 +11,10 @@ import lombok.NoArgsConstructor;
 @Getter
 @Entity
 public class Member {
+
+    public void changeName(String name){
+        this.name=name;
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name =  "id", updatable = false)
