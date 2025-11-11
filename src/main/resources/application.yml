@@ -1,5 +1,16 @@
 spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    defer-datasource-initialization: true   # ★ 이게 없으면 data.sql 실행 안 됨
+
   sql:
     init:
-      mode: never
+      mode: always
 
+  h2:
+    console:
+      enabled: true
