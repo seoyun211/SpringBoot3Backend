@@ -9,9 +9,9 @@ import java.util.List;
 public class TestService {
 
     @Autowired
-    MemberRepository memberRepository;
+     MemberRepository memberRepository;
 
-    public List<Member> getMembers() {
-        return memberRepository.findAll();
+    public List<Member> getAllMembers() {
+        return memberRepository.findAll(); // ② 멤버 목록 얻기
     }
 }
